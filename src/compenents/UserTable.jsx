@@ -1,7 +1,7 @@
 import React from 'react'
 import '../css/userTable.css'
 function UserTable({users,onClose}) {
-  console.log("UserTable a gelen users:", users);  
+   
   if (!Array.isArray(users) || users.length === 0) return <p>Veri yok veya hata var.</p>;
   return (
     <div className='table-wrapper'>

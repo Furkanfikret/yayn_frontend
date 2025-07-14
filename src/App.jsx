@@ -19,7 +19,7 @@ function App() {
   useEffect(()=>{
     axios.get(`${api_url}/users`)
       .then(res => {
-        console.log("API den gelen veri:",res.data)
+        
         setUsers(res.data)
       })
       .catch(err => console.log(`Veri tabanına Bağlanılamadı ! - ${err}`))
