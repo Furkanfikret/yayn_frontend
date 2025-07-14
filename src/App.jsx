@@ -13,16 +13,18 @@ function App() {
   const decreament = () =>{setDigit(prev => prev-1)}
   const reset = () =>{setDigit(0)}
   const api_url = import.meta.env.VITE_API_URL; 
+  
+
 
   useEffect(()=>{
     axios.get(api_url)
       .then(res => {
-        console.log(res.data)
+        console.log("API den gelen veri:",res.data)
         setUsers(res.data)
       })
       .catch(err => console.log(`Veri tabanına Bağlanılamadı ! - ${err}`))
   },[])
-
+  console.log("State içindeki users:", users);
   return (
    <div>
     <h1>Frontend Home Page !</h1>
