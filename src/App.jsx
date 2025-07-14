@@ -24,7 +24,7 @@ function App() {
       })
       .catch(err => console.log(`Veri tabanına Bağlanılamadı ! - ${err}`))
   },[])
-  console.log("State içindeki users:", users);
+  
   return (
    <div>
     <h1>Frontend Home Page !</h1>
