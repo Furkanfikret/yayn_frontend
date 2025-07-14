@@ -16,7 +16,10 @@ function App() {
 
   useEffect(()=>{
     axios.get(api_url)
-      .then(res => setUsers(res.data))
+      .then(res => {
+        console.log(res.data)
+        setUsers(res.data)
+      })
       .catch(err => console.log(`Veri tabanına Bağlanılamadı ! - ${err}`))
   },[])
 
